@@ -19,4 +19,8 @@ class MarcaEmpresa extends Model
     {
         return $this->belongsTo(User::class, 'user_id');
     }
+    public function productos()
+{
+    return $this->hasMany(Producto::class, 'marca_empresa_id');
+}
 }
