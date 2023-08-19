@@ -51,7 +51,7 @@ class MarcaController extends Controller
     {
         $request->validate([
             'nombre' => 'required|string|max:255',
-            'proveedor' => 'required|exists:proveedores,id',
+            'proveedor' => 'required|exists:proveedors,id',
         ]);
 
         $marca = MarcaEmpresa::findOrFail($id);
